@@ -17,7 +17,6 @@ const models = require('./models');
 const DB_HOST = process.env.DB_HOST;
 const port = process.env.PORT || 4000;
 
-
 const app = express();
 
 db.connect(DB_HOST);
@@ -43,8 +42,6 @@ const server = new ApolloServer({
 
     // try to retrieve a user with the token
     const user = getUser(token);
-
-    console.log(user);
 
     return { models, user };
   }
